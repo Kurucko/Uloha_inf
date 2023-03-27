@@ -1,2 +1,3 @@
-"# Uloha_inf" 
+"# Uloha_inf"
+
 Adamko Skvarek
