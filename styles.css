@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
 
-body{
+body {
     width: 100%;
     background: #000;
 }
 
-.content h2{
+.content h2 {
     color: #fff;
     font-size: 7em;
     position: absolute;
@@ -21,12 +21,19 @@ body{
     text-align: center;
 }
 
-.content h2:nth-child(1){
+
+.content h2:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px #C9001E;
+}
+
+.content h2:nth-child(2) {
     color: #fff;
     -webkit-text-stroke: 2px #C9001E;
 }
 
 .content h2:nth-child(2){
+
     color: #722F37;
     animation: animate 5s ease-in-out infinite;
 }
@@ -46,6 +53,7 @@ body{
             0% 100%
         );
     }
+
     50% {
         clip-path: polygon(
             0% 60%,
@@ -66,12 +74,13 @@ body{
     margin: 20px;
 }
 
-#daco{
+#daco {
     width: 100%;
     text-align: center;
 }
 
 p{
+
     width: 500px;
     color: #C9001E;
 }
@@ -83,11 +92,11 @@ hr{
     margin-bottom: 5vw;
 }
 
-#hlavna{
+#hlavna {
     padding-left: 100px;
     display: grid;
     text-align: center;
-    grid-template-columns: lfr lfr;
+    grid-template-columns: 1fr 1fr;
     text-align: center;
 
 }
@@ -96,9 +105,10 @@ textarea{
     resize: none;
     overflow: auto;
     color: #000;
+    background-color: #722F37;
     padding: 10px;
     border-radius: 20px;
-    border-color:#722F37 ;
+    border-color:black ;
     height: 60vh;
     width: 25vw;
     font-size: 1.2rem;
@@ -112,6 +122,7 @@ textarea::-webkit-scrollbar{
 }
 
 textarea::-webkit-scrollbar-track{
+
     background-color: #722F37;
     border-radius: 2px;
 }
@@ -123,7 +134,7 @@ textarea::-webkit-scrollbar-thumb{
 }
 
 /* color on hover */
-textarea::-webkit-scrollbar-thumb:hover{
+textarea::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 
@@ -133,7 +144,7 @@ textarea::-webkit-scrollbar-thumb:hover{
     width: 50px;
 }
 
-#blob{
+#blob {
     width: 400px;
     height: 400px;
 }
@@ -178,27 +189,27 @@ textarea::-webkit-scrollbar-thumb:hover{
 }
 
 /* background of the scrollbar */
-#panel2::-webkit-scrollbar-track{
+#panel2::-webkit-scrollbar-track {
     background: #000;
 }
 
 /* color of the scrollbar handle */
-#panel2::-webkit-scrollbar-thumb{
+#panel2::-webkit-scrollbar-thumb {
     background: #888;
 }
 
 /* color on hover */
-#panel2::-webkit-scrollbar-thumb:hover{
+#panel2::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 
-#colorpicker{
+#colorpicker {
     float: left;
 }
 
-#areaTerminal{
+#areaTerminal {
     display: grid;
-    grid-template-columns: lfr;
+    grid-template-columns: 1fr;
     gap: 20px;
     text-align: center;
 }
@@ -213,15 +224,15 @@ menu{
 
 button{
     padding: 0px 20px;
+    margin: 0 10px;
     background-color: #834545;
     border: none;
     border-radius: 5px;
     font-weight: bold;
     color: #000;
-    margin: 0 10px;
 }
 
-#panel button, #panel2 button{
+#panel button, #panel2 button {
     background-color: rgba(255, 255, 255, 0.5);
     opacity: 0.5;
     border: none;
@@ -240,6 +251,7 @@ button{
     font-weight: bold;
     border-radius: 20px;
 }
+
 a{
     text-decoration:none ;
     color: #722F37;
@@ -253,7 +265,7 @@ a{
     width: 20px;
     text-align: right;
     margin-right: 10px;
-    color: #555;
+    color:gray;
 }
 
 .slider{
@@ -266,5 +278,5 @@ a{
 
 #comntainer{
     display: grid;
-    grid-template-columns: lfr lfr;
+    grid-template-columns: 1fr 1fr;
 }
