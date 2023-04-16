@@ -48,15 +48,11 @@ hr{
 }
 
 #messages{
-
-}
-
-.name{
-    position: relative;
-    font-size: 70px;
-    color: #fff;
-    margin-top: 30px;
-    text-align: center;
+    width: 25vw;
+    height: 50px;
+    background-color: #C9001E;
+    font-weight: bold;
+    border-radius: 20px;
 }
 
 textarea{
@@ -77,6 +73,19 @@ textarea{
     /* background-color: FF5959; */
     border-radius: 20px;
     width: 50px;
+}
+
+#blob{
+    width: 400px;
+    height: 400px;
+}
+
+.hidden{
+
+}
+
+.visible{
+    
 }
 
 #areaTerminal{
