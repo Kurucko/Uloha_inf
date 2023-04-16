@@ -19,14 +19,32 @@
             <h2>ves Converter</h2>
         </div>
     </section>
+
+    <hr>
+
+    <section id="hlavna">
+        <div id="areaTerminal">
+            <input type="file" id="fileInput">
+            <textarea name="ves" id="" cols="20" rows="20" placeholder="DACO" id="ves">
+            </textarea>
+            <div id="messages"></div>
+            <input type="adresaObrazka" style="visibility: hidden;" value="{{ url_for('static', filename='canvas.png')}}">
+
+            <button type="submit" id="tlacitko">AAA</button>
+
+        </div>
+        <div id="blob">
+            <svg id="visual" viewBox="0 0 400 400" width="400" height="400" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                <g> transform="translate(178.32364756565872 208.6382785433497)"
+                    <path id="blobl" d="M125.3 -112.8C156.3 -94.3 171.1 -47.1 166.8 -4.4C162.4 38.4 138.8 76.8 107.8 94C76.8 111.2 38.4 107.1 7.4 99.7C-23.6 92.2 -47.1 81.5 -70.5 64.3C-93.8 47.1 -116.9 23.6 -122.7 -5.8C-128.5 -35.1 -116.9 -70.2 -93.6 -88.7C-70.2 -107.2 -35.1 -109.1 6 -115.1C47.1 -121.1 94.3 -131.3 125.3 -112.8">
+
+                    </path>
+                </g>
+            </svg>>
+        </div>
+    </section>
     
-    <h1 class="name">Webserver</h1>
-    <textarea class="text1" id="vtext" cols="30" rows="10"></textarea>
-    
-    <div><button class="btn1" onclick="">Click</button></div>
-    <p id="toutput"></p>
-    
-    <img src="" alt="">
 </body>
 
 </html>

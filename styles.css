@@ -1,52 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
 *{
     margin: 0;
-    padding: 5px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
 }
 
 body{
-    display: contents;
-    background: 120D0D;
+    width: 100%;
+    background: #000;
 }
 
-.name{
-    position: relative;
-    font-size: 70px;
-    color: purple;
-    margin-top: 30px;
+.content h2{
+    color: #fff;
+    font-size: 7em;
+    position: absolute;
+    /*transform:translate(-0%, 0%); */
+    width: 100%;
     text-align: center;
 }
 
-.text1{
-    resize: none;
-    color: black;
-    padding: 1em;
-    border-radius: 10px;
-    height: 450px;
-    width: 350px;
-    font-family: monospace, verdana, sans-serif;
-    font-size: 20px;
-    margin-left: 180px;
-    margin-top: 100px;    
+#speech{
+    height: 200px;
+    margin: 20px;
 }
 
-.btn1{
-    display: block;
-    padding: 1px;
-    background: plum;
-    border-radius: 5px;
+#daco{
+    width: 100%;
+    text-align: center;
+}
+
+hr{
+    height: 5px;
+    background-color: #722F37;
     border: none;
-    font-family: monospace, verdana, sans-serif;
-    text-align: center;
-    margin-left: 490px;
-    width: 70px;
-    height: 25px;
-    cursor: pointer;
-    -webkit-transition-duration: 0.1s;
-    transition-duration: 0.1s;
+    margin-bottom: 5vw;
 }
 
-.btn1:hover, .btn1:focus, .btn1:active{
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+#hlavna{
+    padding-left: 100px;
+    display: grid;
+    text-align: center;
+    grid-template-columns: lfr lfr;
+    text-align: center;
+
+}
+
+#messages{
+    width: 25vw;
+    height: 50px;
+    background-color: #C9001E;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+textarea{
+    resize: none;
+    overflow: auto;
+    color: #000;
+    padding: 10px;
+    border-radius: 20px;
+    border-color:#722F37 ;
+    height: 60vh;
+    width: 25vw;
+    font-size: 1.2rem;
+    font-weight: bold;
+    outline: none;   
+}
+
+#fileInput{
+    /* background-color: FF5959; */
+    border-radius: 20px;
+    width: 50px;
+}
+
+#blob{
+    width: 400px;
+    height: 400px;
+}
+
+.hidden{
+
+}
+
+.visible{
+    
+}
+
+#areaTerminal{
+    display: grid;
+    grid-template-columns: lfr;
+    gap: 20px;
+    text-align: center;
+}
+
+button{
+    padding: 0px 20px;
+    background-color: #834545;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #000;
+    margin: 0 10px;
 }
