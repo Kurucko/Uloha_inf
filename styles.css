@@ -66,7 +66,10 @@ body{
     margin: 20px;
 }
 
-
+#daco{
+    width: 100%;
+    text-align: center;
+}
 
 p{
     width: 500px;
@@ -149,6 +152,46 @@ textarea::-webkit-scrollbar-thumb:hover{
     overflow: hidden;
 }
 
+#panel{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#panel2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#panel12::-webkit-scrollbar{
+    width: 12px;
+    height: 6px;
+}
+
+/* background of the scrollbar */
+#panel2::-webkit-scrollbar-track{
+    background: #000;
+}
+
+/* color of the scrollbar handle */
+#panel2::-webkit-scrollbar-thumb{
+    background: #888;
+}
+
+/* color on hover */
+#panel2::-webkit-scrollbar-thumb:hover{
+    background: #555;
+}
+
 #colorpicker{
     float: left;
 }
@@ -175,6 +218,18 @@ button{
     border-radius: 5px;
     font-weight: bold;
     color: #000;
+    margin: 0 10px;
+}
+
+#panel button, #panel2 button{
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0.5;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
+    padding: 0px 20px;
     margin: 0 10px;
 }
 
