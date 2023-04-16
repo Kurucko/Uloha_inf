@@ -269,5 +269,5 @@ a {
 
 #container {
     display: grid;
-    grid-template-columns: lfr lfr;
+    grid-template-columns: 1fr 1fr;
 }
