@@ -66,6 +66,13 @@ body{
     margin: 20px;
 }
 
+
+
+p{
+    width: 500px;
+    color: #C9001E;
+}
+
 hr{
     height: 5px;
     background-color: #722F37;
@@ -80,14 +87,6 @@ hr{
     grid-template-columns: lfr lfr;
     text-align: center;
 
-}
-
-#messages{
-    width: 25vw;
-    height: 50px;
-    background-color: #C9001E;
-    font-weight: bold;
-    border-radius: 20px;
 }
 
 textarea{
@@ -139,9 +138,12 @@ textarea::-webkit-scrollbar-thumb:hover{
 .hidden{
     visibility: hidden;
 }
-
 .visible{
     visibility: visible;
+}
+
+#colorpicker{
+    float: left;
 }
 
 #areaTerminal{
@@ -149,6 +151,14 @@ textarea::-webkit-scrollbar-thumb:hover{
     grid-template-columns: lfr;
     gap: 20px;
     text-align: center;
+}
+
+option{
+    background-color: #834545;
+}
+
+menu{
+    background-color: #834545;
 }
 
 button{
@@ -159,4 +169,40 @@ button{
     font-weight: bold;
     color: #000;
     margin: 0 10px;
+}
+
+#messages{
+    width: 25vw;
+    height: 50px;
+    background-color: #C9001E;
+    font-weight: bold;
+    border-radius: 20px;
+}
+a{
+    text-decoration:none ;
+    color: #722F37;
+    padding: 10px 20px;
+}
+
+.line-number{
+    user-select: none;
+    pointer-events: none;
+    display: inline-block;
+    width: 20px;
+    text-align: right;
+    margin-right: 10px;
+    color: #555;
+}
+
+.slider{
+    display: block;
+}
+
+.filtreVsetky{
+    margin: 0 10px;
+}
+
+#comntainer{
+    display: grid;
+    grid-template-columns: lfr lfr;
 }
