@@ -47,6 +47,9 @@ hr{
 
 }
 
+#messages{
+
+}
 
 .name{
     position: relative;
@@ -83,23 +86,12 @@ textarea{
     text-align: center;
 }
 
-.btn1{
-    display: block;
-    padding: 1px;
-    background: plum;
-    border-radius: 5px;
+button{
+    padding: 0px 20px;
+    background-color: #834545;
     border: none;
-    font-family: monospace, verdana, sans-serif;
-    text-align: center;
-    margin-left: 490px;
-    width: 70px;
-    height: 25px;
-    cursor: pointer;
-    -webkit-transition-duration: 0.1s;
-    transition-duration: 0.1s;
-}
-
-.btn1:hover, .btn1:focus, .btn1:active{
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    border-radius: 5px;
+    font-weight: bold;
+    color: #000;
+    margin: 0 10px;
 }
