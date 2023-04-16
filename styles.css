@@ -142,6 +142,13 @@ textarea::-webkit-scrollbar-thumb:hover{
     visibility: visible;
 }
 
+#skuska{
+    border: 5px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
 #colorpicker{
     float: left;
 }
