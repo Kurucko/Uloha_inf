@@ -1,33 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
 *{
     margin: 0;
-    padding: 5px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
 }
 
 body{
-    display: contents;
-    background: 120D0D;
+    width: 100%;
+    background: #000;
 }
+
+.content h2{
+    color: #fff;
+    font-size: 7em;
+    position: absolute;
+    /*transform:translate(-0%, 0%); */
+    width: 100%;
+    text-align: center;
+}
+
+#speech{
+    height: 200px;
+    margin: 20px;
+}
+
+#daco{
+    width: 100%;
+    text-align: center;
+}
+
+hr{
+    height: 5px;
+    background-color: #722F37;
+    border: none;
+    margin-bottom: 5vw;
+}
+
+#hlavna{
+    padding-left: 100px;
+    display: grid;
+    text-align: center;
+    grid-template-columns: lfr lfr;
+    text-align: center;
+
+}
+
 
 .name{
     position: relative;
     font-size: 70px;
-    color: purple;
+    color: #fff;
     margin-top: 30px;
     text-align: center;
 }
 
-.text1{
+textarea{
     resize: none;
-    color: black;
-    padding: 1em;
-    border-radius: 10px;
-    height: 450px;
-    width: 350px;
-    font-family: monospace, verdana, sans-serif;
-    font-size: 20px;
-    margin-left: 180px;
-    margin-top: 100px;    
+    overflow: auto;
+    color: #000;
+    padding: 10px;
+    border-radius: 20px;
+    border-color:#722F37 ;
+    height: 60vh;
+    width: 25vw;
+    font-size: 1.2rem;
+    font-weight: bold;
+    outline: none;   
+}
+
+#fileInput{
+    /* background-color: FF5959; */
+    border-radius: 20px;
+    width: 50px;
+}
+
+#areaTerminal{
+    display: grid;
+    grid-template-columns: lfr;
+    gap: 20px;
+    text-align: center;
 }
 
 .btn1{
