@@ -467,7 +467,7 @@ def rasterizacia(subor: str, ww) -> Image:
 
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='template')
 
 
 
