@@ -1,7 +1,6 @@
 const fileInput = document.getElementById('fileInput');
 const textArea = document.getElementById('ves');
 
-
 fileInput.addEventListener('change', () => {
     const file = fileInput.files[0];
     const reader = new FileReader();
@@ -16,21 +15,22 @@ fileInput.addEventListener('change', () => {
 
     
 document.getElementById("tlacitko").addEventListener("click", obrazok)
-var n = 0;
-var imageUrl = document.getElementById("adresaObrazka").value;
+
+// var imageUrl = document.getElementById("adresaObrazka").value;
+
 // document.getElementById("ves").addEventListener("keyup", obrazok)
 
 function obrazok(){
     let data = document.getElementById("ves").value;
     // console.log(data);
     let w = window.innerWidth / 3;
-    n++;
+    
     $.ajax({
         type: "POST",
         url: "/",
-        data: {"data": data, "w": w, "n":n},
+        data: {"data": data, "w": w},
         success: function(response) {
-            let [sprava, boo] = response;
+            let [sprava,image_base64, boo] = response;
             document.getElementById("messages").innerHTML = sprava;
             if (boo){
                 var dalej;
@@ -68,8 +68,11 @@ function obrazok(){
                     skuskaa.style.height = `${h}px`;
 
                     ctx.drawImage(img,0,0);
-                    konecna(img, dalej);
+                    konecna(img, dalej, imageUrl);
                 }
+                // img.src = imageUrl;
+                var imageUrl = `data:image/png;base64,${image_base64}`;
+                document.getElementById("adresaObrazka").value = imageUrl;
                 img.src = imageUrl;
                 
             };
@@ -79,15 +82,13 @@ function obrazok(){
     });
 };
 
-function konecna(img, dalej){
-    
+function konecna(img, dalej, imageUrl){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var skuska = document.getElementById("skuska");
    
     if (!dalej) return;
     img.onload = function() {
-        
-        var canvas = document.getElementById("myCanvas");
-        var ctx = canvas.getContext("2d");
-        const skuska = document.getElementById("skuska");
         let panel = document.createElement("span");
         panel.id = "panel";
         panel.innerHTML = "<button id='pero'>Pero </button>";
@@ -118,6 +119,9 @@ function konecna(img, dalej){
         
 
         function pero(){
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            var imageUrl = document.getElementById("adresaObrazka").value
             panel.style.transitionDuration = "0s";
             panel.style.visibility = "hidden";
             panel.style.transform = "translate(0px,-40px)";
@@ -257,6 +261,9 @@ function konecna(img, dalej){
         function guma(){
             // toto gumovanie je napicu zrobene, treba zohladnit ten cas kym sa nacita obarzok(pozri jak som to zrobil pri filtroch)
             //je tu chyba ze negumuje s filtrom ked das, asi preto hore co som pisal
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            var imageUrl = document.getElementById("adresaObrazka").value;
             document.getElementById("filter").style.visibility ="hidden";
             panel2.style.transitionDuration = "0s";
             panel2.style.visibility = "hidden";
@@ -308,11 +315,13 @@ function konecna(img, dalej){
             predloha.height = canvas.height;
             let imgPredloha = new Image();
             imgPredloha.src = imageUrl;
+            
             ctx2.drawImage(img, 0, 0);
             let OriginalImageData = ctx2.getImageData(0, 0, predloha.width, predloha.height);
             let OrigialPixelData = OriginalImageData.data;
             //upraveny obrazok
-            const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            // var imageData = canvas.toDataURL();
             const pixelData = imageData.data;
             var gumovanie = false;
             platno.addEventListener("mousedown", gumovanie1);
@@ -366,7 +375,7 @@ function konecna(img, dalej){
             };
             
             function zmazat(){
-                ctx.drawImage(img, 0,0);
+                ctx.drawImage(imgPredloha, 0,0);
             }
 
             function vratitPanel(){
@@ -386,9 +395,14 @@ function konecna(img, dalej){
                 platno.removeEventListener("mouseup", gumovanie3);
                 
             }
-        }
+        };
     
         function ulozit(){
+            var imageUrl = document.getElementById("adresaObrazka").value;
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            var panel = document.getElementById("panel");
+            var panel2= document.getElementById("panel2");
             document.getElementById("filter").style.visibility ="hidden";
             panel.style.transitionDuration = "0s";
             panel.style.visibility = "hidden";
@@ -437,10 +451,6 @@ function konecna(img, dalej){
             menu.appendChild(option6);
 
             
-
-            const canvas = document.getElementById('myCanvas');
-            const ctx = canvas.getContext('2d');
-
             menu.addEventListener("change", function(e){
                 format = menu.value;
                 ulozitBTN.download = `canvas.${format}`;
@@ -488,6 +498,9 @@ function konecna(img, dalej){
         };
         
         function zobrazitFiltre(){
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            var imageUrl = document.getElementById("adresaObrazka").value;
             let zrusit = document.createElement("button");
             zrusit.innerHTML = "Zrusit";
             zrusit.id = "zrusit";
@@ -528,7 +541,7 @@ function konecna(img, dalej){
                         zmenitFilter(filtr);
                     });
                 };
-                img1.src = canvas.toDataURL();
+                img1.src = imageUrl;
             }
 
             pridatFilter("filter1", "blur(5px)");
@@ -574,6 +587,9 @@ function konecna(img, dalej){
         }
 
         function filterVlastny(){
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            var imageUrl = document.getElementById("adresaObrazka").value;
             let container = document.createElement("div");
             container.id = "container";
             skuska.appendChild(container);
@@ -666,4 +682,3 @@ function konecna(img, dalej){
     img.src = imageUrl;
 }
 // aaa
-// äsa
