@@ -172,7 +172,7 @@ textarea::-webkit-scrollbar-thumb:hover {
 }
 
 #fileInput {
-    /* background-color: FF5959; */
+    /* background-color: #FF5959; */
     border-radius: 20px;
     width: 50px;
 }
@@ -253,6 +253,7 @@ textarea::-webkit-scrollbar-thumb:hover {
 }
 
 option {
+
     background-color: #abdbe3;
 }
 
@@ -263,11 +264,13 @@ menu {
 button {
     padding: 0px 20px;
     margin: 0 10px;
+
     background-color: #abdbe3;
+
     border: none;
     border-radius: 5px;
     font-weight: bold;
-    color: #000;
+    color: black;
 }
 
 #panel button, #panel2 button {
@@ -295,6 +298,7 @@ a {
     text-decoration:none ;
     color: #722F37;
     padding: 10px 20px;
+    font-weight: bold;
 }
 
 .line-number {
@@ -315,7 +319,7 @@ a {
     margin: 0 10px;
 }
 
-#comntainer {
+#container {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
