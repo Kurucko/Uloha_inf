@@ -17,8 +17,8 @@
 
     <svg id="obrasok" viewBox="0 0 2560 1297" width="2560" height="1297" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-        <rect x="0" y="0" width="2560" height="1297" fill="#1b0b56"></rect>
-            
+        <rect x="0" y="0" width="2560" height="1297" fill="#1b0b56" ></rect>
+        <!-- <line id="ciara" x1="50" y1="50" x2="150" y2="50" stroke="#4504f9" stroke-width="5" /> -->
        
             <g class="g1" transform="translate(2560, 1297)">
                 <path class="sc" id="blob1"
@@ -145,6 +145,11 @@
             e.setAttribute('transform', `scale(${window.innerHeight/400})`)
         });
 
+        // const ciara = document.getElementById("ciara");
+        // ciara.setAttribute('x2', `${window.innerWidth}`);
+        // ciara.setAttribute('y1', `${window.innerHeight/5}`);
+        // ciara.setAttribute('y2', `${window.innerHeight/5}`);
+
         const tweens = [
             { selector: '#blob1', from: '#blob1', to: '#blob11', duration: 18000 },
             { selector: '#blob2', from: '#blob2', to: '#blob22', duration: 12000 },
@@ -183,27 +188,23 @@
             <h2>Ves Converter</h2>
         </div>
     </section>
-    <hr>
+    
+    <!-- <hr > -->
+    
 
     <section id="hlavna">
         <div id="areaTerminal">
             <input type="file" id="fileInput">
-            <textarea name="ves" cols="20" rows="20" placeholder="DACO" id="ves"></textarea>
+            <textarea name="ves" cols="20" rows="20" placeholder="Vloz ves subor" id="ves"></textarea>
             <div id="messages"> </div>
+            <button type="submit" id="tlacitko">Zobrazit</button>
             <input id="adresaObrazka" style="visibility: hidden;"
                 value="{{ url_for('static', filename='canvas.png') }}">
 
-
-
-            <button type="submit" id="tlacitko">AAA</button>
-
-
         </div>
-
-        <div id="blob">
-
-
-
+        <div id="grid-item">
+            <div id="blob">
+            </div>
         </div>
 
         <div id="konecnaa">

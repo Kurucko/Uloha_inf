@@ -23,7 +23,7 @@ document.getElementById("tlacitko").addEventListener("click", obrazok)
 function obrazok(){
     let data = document.getElementById("ves").value;
     // console.log(data);
-    let w = window.innerWidth / 3;
+    let w = window.innerWidth / 2.5;
     
     $.ajax({
         type: "POST",
